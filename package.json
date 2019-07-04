@@ -15,7 +15,9 @@
     "test:docker": "truffle test --network docker",
     "test:ci": "yarn lint && yarn test:docker",
     "test": "truffle test",
-    "truffle": "truffle"
+    "truffle": "truffle",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bignumber.js": "^7.2.1",
@@ -23,7 +25,8 @@
     "lodash": "^4.17.11",
     "openzeppelin-solidity": "^1.12.0",
     "truffle": "^4.1.14",
-    "web3": "1.0.0-beta.36"
+    "web3": "1.0.0-beta.36",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -38,5 +41,6 @@
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.10.2",
     "solium": "^1.1.8"
-  }
+  },
+  "snyk": true
 }
